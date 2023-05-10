@@ -8,28 +8,43 @@ import Familia from "./components/basicos/Familia";
 import FamiliaMembro from "./components/basicos/FamiliaMembro";
 import ListaAlunos from "./components/Repeticao/ListaAlunos";
 import TabelaProdutos from "./components/Repeticao/TabelaProdutos";
+import ParouImpar from "./components/condicional/ParouImpar";
+import UsuarioInfo from "./components/condicional/UsuarioInfo";
+import DiretaPai from "./components/comunicacao/DiretaPai";
+import IndiretaPai from "./components/comunicacao/IndiretaPai";
+import Input from "./components/formulario/Input";
+
 import "./App.css";
 export default (_) => (
   <div className="App">
     <h2>Fundamentos React</h2>
     <div className="Cards">
-    <Card titulo="#7 Tabela produtos" color="#562671">
-        <TabelaProdutos>
-
-        </TabelaProdutos>
+    <Card titulo="#11 componente controlado" color="#4B0082">
+        <Input></Input>
       </Card>
-    <Card titulo="#6 Lista Alunos" color="#8C133F">
-        <ListaAlunos>
+      <Card titulo="#10 comunicação indireta" color="#EE82EE">
+        <IndiretaPai />
+      </Card>
+      <Card titulo="#9 comunicação direta" color="#3CB371">
+        <DiretaPai />
+      </Card>
 
-        </ListaAlunos>
+      <Card titulo="#8 Renderização condicional" color="#00BFFF">
+        <ParouImpar numero={21}></ParouImpar>
+        <UsuarioInfo usuario={{ nome: "fernando" }} />
+      </Card>
+      <Card titulo="#7 Tabela produtos" color="#562671">
+        <TabelaProdutos></TabelaProdutos>
+      </Card>
+      <Card titulo="#6 Lista Alunos" color="#8C133F">
+        <ListaAlunos></ListaAlunos>
       </Card>
 
       <Card titulo="#5 Componente com filhos" color="#F17979">
-        <Familia sobrenome="Silva" >
-            <FamiliaMembro nome="Pedro" />
-            <FamiliaMembro nome="Ana"  />
-            <FamiliaMembro nome="Gabriel" />
-           
+        <Familia sobrenome="Silva">
+          <FamiliaMembro nome="Pedro" />
+          <FamiliaMembro nome="Ana" />
+          <FamiliaMembro nome="Gabriel" />
         </Familia>
       </Card>
 
