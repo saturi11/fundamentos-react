@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css";
 import Primeiro from "./components/basicos/Primeiro";
 import ComParametro from "./components/basicos/ComParametro";
 import Fragmento from "./components/basicos/Fragmento";
@@ -13,12 +14,18 @@ import UsuarioInfo from "./components/condicional/UsuarioInfo";
 import DiretaPai from "./components/comunicacao/DiretaPai";
 import IndiretaPai from "./components/comunicacao/IndiretaPai";
 import Input from "./components/formulario/Input";
-
-import "./App.css";
+import Contador from "./components/contador/Contador";
+import Mega from "./components/mega/Mega";
 export default (_) => (
   <div className="App">
     <h2>Fundamentos React</h2>
     <div className="Cards">
+    <Card titulo="#13 mega" color="#8559b5">
+        <Mega></Mega>
+      </Card>
+    <Card titulo="#12 Contador" color="#C71585">
+        <Contador numeroInicial={10}></Contador>
+      </Card>
     <Card titulo="#11 componente controlado" color="#4B0082">
         <Input></Input>
       </Card>
